@@ -29,6 +29,7 @@ import { UserService } from "./user.service";
 import { AdminAuthGuardService } from "./admin-auth-guard.service";
 import { CategoryService } from "./category.service";
 import {ProductService} from "./product.service";
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {ProductService} from "./product.service";
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,7 @@ import {ProductService} from "./product.service";
     RouterModule.forRoot([
       {
         path: '',
-        component: HomeComponent
+        component: ProductsComponent
       },
       {
         path: 'login',
