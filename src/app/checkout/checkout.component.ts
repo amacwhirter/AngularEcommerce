@@ -19,11 +19,10 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   cartSubscription: Subscription;
   userSubscription: Subscription;
 
-  constructor(
-    private router: Router,
-    private authService: AuthService,
-    private shoppingCartService: ShoppingCartService,
-    private orderService: OrderService) {
+  constructor(private router: Router,
+              private authService: AuthService,
+              private shoppingCartService: ShoppingCartService,
+              private orderService: OrderService) {
   }
 
   async ngOnInit() {
@@ -39,7 +38,8 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
   async placeOrder() {
     let order = new Order(this.userId, this.shipping, this.cart);
-    let result = await this.orderService.storeOrder(order);
+    let result = await this.orderService.placeOrder(order);
+    this.shoppingCartService.clearCart();
     this.router.navigate(['/order-success', result.key]);
   }
 }
