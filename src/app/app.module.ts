@@ -11,31 +11,31 @@ import { CustomFormsModule } from "ng2-validation";
 import { DataTableModule } from "angular-4-data-table";
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { ProductsComponent } from './products/products.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { OrderSuccessComponent } from './order-success/order-success.component';
-import { MyOrdersComponent } from './my-orders/my-orders.component';
-import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
-import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
-import { LoginComponent } from './login/login.component';
-import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { NavbarComponent } from './core/components/navbar/navbar.component';
+import { HomeComponent } from './core/components/home/home.component';
+import { ProductsComponent } from './shopping/components/products/products.component';
+import { ShoppingCartComponent } from './shopping/components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './shopping/components/checkout/checkout.component';
+import { OrderSuccessComponent } from './shopping/components/order-success/order-success.component';
+import { MyOrdersComponent } from './shopping/components/my-orders/my-orders.component';
+import { AdminProductsComponent } from './admin/components/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './admin/components/admin-orders/admin-orders.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { ProductFormComponent } from './admin/components/product-form/product-form.component';
 
-import { AuthService } from "./auth.service";
-import { AuthGuardService } from "./auth-guard.service"
-import { UserService } from "./user.service";
-import { AdminAuthGuardService } from "./admin-auth-guard.service";
-import { CategoryService } from "./category.service";
-import { ProductService } from "./product.service";
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ShoppingCartService } from "./shopping-cart.service";
-import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
-import { OrderService } from "./order.service";
-import { ShoppingCartSummaryComponent } from './shopping-cart-summary/shopping-cart-summary.component';
-import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+import { AuthService } from "./shared/services/auth.service";
+import { AuthGuardService } from "./shared/services/auth-guard.service"
+import { UserService } from "./shared/services/user.service";
+import { AdminAuthGuardService } from "./admin/services/admin-auth-guard.service";
+import { CategoryService } from "./shared/services/category.service";
+import { ProductService } from "./shared/services/product.service";
+import { ProductFilterComponent } from './shopping/components/products/product-filter/product-filter.component';
+import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { ShoppingCartService } from "./shared/services/shopping-cart.service";
+import { ProductQuantityComponent } from './shared/components/product-quantity/product-quantity.component';
+import { OrderService } from "./shared/services/order.service";
+import { ShoppingCartSummaryComponent } from './shopping/components/shopping-cart-summary/shopping-cart-summary.component';
+import { ShippingFormComponent } from './shopping/components/shipping-form/shipping-form.component';
 
 @NgModule({
   declarations: [
